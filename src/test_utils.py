@@ -12,7 +12,7 @@ def evaluate_same_subject(
 ) -> List[Dict[str, Union[str, List[str]]]]:
     """
     Perform evaluation on examples on same subject but different relation.
-    
+
     `examples_same_subj`: list of input texts.
     """
     results: List[dict] = []

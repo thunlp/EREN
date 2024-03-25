@@ -57,4 +57,3 @@ class Args(Tap):
 
     mode: str = "train_test"
     """"test" / "train" for test or train only"""
-

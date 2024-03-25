@@ -6,7 +6,9 @@ This repo is the official implementation for the paper [Robust and Scalable Mode
 - **Aggregating Multiple Edits:** Empirical results show that our method can correct answer queries that depend on knowledge from multiple edits -- a feature that most existing editors cannot handle.
 - **Cleaner and more challenging dataset:** To better evaluate the robustness of model editors, we clean up existing datasets for model editing (CounterFact and FEVER). We also construct a new, more challenging dataset -- **CounterFact-Hard** -- that contains irrelevant questions that are more challenging than existing ones in QA. 
 
-![framework of EREN](images/framework.png)
+![Framework](images/framework.png)
+
+> The framework of our method, EREN.
 
 ## Result
 
