@@ -1,6 +1,17 @@
 # EREN: Robust and Scalable Model Editing for Large Language Models
 
-This repo is the official implementation for the paper [Robust and Scalable Model Editing for Large Language Models (upcoming)](upcoming-paper-link). It presents a model editor called EREN (Edit models by REading Notes).
+This repo is the official implementation for the COLING 2024 paper [Robust and Scalable Model Editing for Large Language Models (upcoming)](upcoming-paper-link). 
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Datasets](#datasets)
+- [How to Run](#how-to-run)
+- [Citation](#citation)
+
+## Introduction
+
+Our paper presents a model editor called EREN (Edit models by REading Notes).
 
 - **State-of-the-art LLM editor:** Our model editor utilizes proper prompting methods to render instruction-finetuned LLMs highly controllable by contextual knowledge and robust to irrelevant context, thereby achieve state-of-the-art model editing in QA and fact-checking.
 - **Aggregating Multiple Edits:** Empirical results show that our method can correct answer queries that depend on knowledge from multiple edits -- a feature that most existing editors cannot handle.
