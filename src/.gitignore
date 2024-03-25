@@ -1,0 +1,13 @@
+.vscode
+__pycache__
+*.pyc
+
+preds_serac*.jsons
+*.png
+./preds.json
+result.txt
+.DS_Store
+*.pdf
+preds*.json
+temp.py
+result
