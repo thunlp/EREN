@@ -1,15 +1,10 @@
 from pathlib import Path
 
-import torch
-
 from args import Args
 from data_utils import dump_json, load_data
 from model.eren import Eren, load_eren_contriever
 from utils import set_seed, get_data_name_and_task_type
 from test_utils import apply_edits, evaluate
-
-
-device = "cuda:3" if torch.cuda.is_available() else "cpu"
 
 
 def load_model(args: Args, data_name, task_type: str) -> Eren:
@@ -29,13 +24,6 @@ def load_model(args: Args, data_name, task_type: str) -> Eren:
         ans_options = None
     else:
         raise ValueError(f"Invalid data name: {data_name}")
-    # model = load_emoren_with_serac(
-    #     args.pretrained_name,
-    #     args.serac_ckpt_path,
-    #     task_type=task_type,
-    #     ans_options=ans_options,
-    #     num_context_examples=args.num_context_examples,
-    # )
     model = load_eren_contriever(
         args.pretrained_name,
         task_type=task_type,
@@ -43,7 +31,7 @@ def load_model(args: Args, data_name, task_type: str) -> Eren:
         one_step_mrc=bool(args.one_step_mrc),
         num_context_examples=args.num_context_examples,
     )
-    model = model.to(device)
+    model = model.to(args.device)
     return model
 
 

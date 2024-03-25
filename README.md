@@ -18,7 +18,9 @@ Metrics:
 - **BP** (Behavior Preservation): the percentage of unrelated examples whose output were not changed by the edit.
 - **EQ** (Edit Quality): the harmonic mean of ES and BP.
 
-![Table 3 in the paper](images/table3.png)
+![Table 3 in the paper](images/result.png)
+
+> Comparison between our method and state-of-the-art model editors on question-answering (QA) and fact-checking (FC).
 
 ## Datasets
 
@@ -45,7 +47,7 @@ pip install -r requirements.txt
 
 ### Evaluation
 
-Our method does not require training and only utilizes pre-trained LLMs, so you just run the following to evaluate our method on each dataset:
+Our method does not require training and only utilizes pre-trained LLMs, so you just run the following to evaluate our method on one of the tasks (by default it tests on CounterFact-Hard):
 
 ```shell
 python test_eren.py
@@ -53,7 +55,15 @@ python test_eren.py
 
 Results will be dumped to `result` by default, and you can specify the output directory by `--output_dir`.
 
-> Run `python test_eren.py -h` for more options.
+Some important arguments:
+
+- `--data_path`: The path of the JSON file containing the data, one of `data/cfh_filtered.json`, `data/fever_filtered.json`, `data/fever_filtered_small.json`, `data/hotpot.json`. Default: `data/cfh_filtered.json`.
+- `--one_step_mrc`: If not 0, the code will run the one-step MRC (baseline in the paper) instead. Default: 0.
+- `num_context_examples`: The number of edits to retrieve during inference.
+- `pretrained_name`: The pretrained path of the pre-trained model. Default: `google/flan-t5-xl`.
+- `--device`: 'cuda' or 'cpu', specifies the device to run the code.
+
+Run `python test_eren.py -h` for more options.
 
 ### Evaluation of Baselines
 
@@ -61,7 +71,7 @@ I have also included the code for evaluating SERAC, unedited model, and fine-tun
 
 ## Contact Me
 
-Feel free to contact me (through e-mail by checking my GitHub profile) if you have any questions or discussions. You can also raise questions in the issue section.
+Feel free to contact me by email (`chenyingfa1999 (at) qq (dot) com`) if you have any questions or discussions. You can also raise questions in the issue section.
 
 ## Citation
 
@@ -71,7 +81,7 @@ If you find this repo useful, please cite our paper:
 @inproceedings{chen2024eren,
   title={Robust and Scalable Model Editing for Large Language Models},
   author={Chen, Yingfa and Zhang, Zhengyan and Han, Xu and Xiao, Chaojun and Liu, Zhiyuan and Chen, Chen and Li, Kuai and Yang, Tao and Sun, Maosong},
-  url={https://www.github.com/thunlp/EREN},
+  booktitle={Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation},
   year={2024}
 }
 ```

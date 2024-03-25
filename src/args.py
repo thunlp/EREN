@@ -10,6 +10,7 @@ class Args(Tap):
     # Output args
     output_dir = "result"
     seed: int = 1
+    device: str = 'cuda'
 
     # Data args
     data_path: str = "../data/cfh_filtered.json"
@@ -22,7 +23,7 @@ class Args(Tap):
     # Whether to reformat NLI tasks to MRC.
     nli_with_mrc: int = 0
 
-    pretrained_name: str = "google/flan-t5-large"
+    pretrained_name: str = "google/flan-t5-xl"
     """Name for the base model"""
 
     # Serac
