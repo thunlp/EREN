@@ -1,10 +1,11 @@
 # EREN: Robust and Scalable Model Editing for Large Language Models
 
-This repo is the official implementation for the COLING 2024 paper [Robust and Scalable Model Editing for Large Language Models (upcoming)](upcoming-paper-link). 
+This repo is the official implementation for the COLING 2024 paper [Robust and Scalable Model Editing for Large Language Models (upcoming)](https://arxiv.org/abs/2403.17431v1). 
 
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Result](#result)
 - [Datasets](#datasets)
 - [How to Run](#how-to-run)
 - [Citation](#citation)
@@ -95,6 +96,7 @@ If you find this repo useful, please cite our paper:
   title={Robust and Scalable Model Editing for Large Language Models},
   author={Chen, Yingfa and Zhang, Zhengyan and Han, Xu and Xiao, Chaojun and Liu, Zhiyuan and Chen, Chen and Li, Kuai and Yang, Tao and Sun, Maosong},
   booktitle={Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation},
+  url={https://arxiv.org/abs/2403.17431v1},
   year={2024}
 }
 ```
